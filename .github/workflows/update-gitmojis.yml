@@ -1,0 +1,26 @@
+name: Update gitmojis
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@v2
+      - run: bun run update-gitmojis
+      - uses: peter-evans/create-pull-request@v8
+        with:
+          branch: update-gitmojis
+          delete-branch: true
+          commit-message: "📝 Update gitmoji list"
+          title: "📝 Update gitmoji list"
+          body: Regenerated `skills/gitmoji/references/gitmojis.md` from the upstream gitmoji list.
+          add-paths: skills/gitmoji/references/gitmojis.md

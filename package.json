@@ -1,0 +1,11 @@
+{
+  "name": "grehnen-skills",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update-gitmojis": "bun scripts/update-gitmojis.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
