@@ -1,9 +1,10 @@
 ---
 name: gh-body-editing
-description: Edit the body of a GitHub issue or PR via a temp file and --body-file. Use when changing a multi-line issue or PR description with gh.
+description: Edit a GitHub issue or PR body with gh. Use when changing an existing issue or PR description.
 ---
 
-When editing a multi-line GitHub issue or PR body follow these steps:
-1. Fetch the current body to /tmp (`gh (issue|pr) view <n> --json body --jq '.body' > /tmp/issue_<n>_body.md`)
-2. Edit the body file as needed
-3. Update the GitHub issue or PR with the edited content using `--body-file`
+1. Create a fresh temp file with `mktemp` and reuse its printed path in every later step.
+2. Fetch the current body into it: `gh <issue|pr> view <n> --json body --jq '.body' > <path>`
+3. Edit the file as needed.
+4. Push the edited body: `gh <issue|pr> edit <n> --body-file <path>`
+5. Confirm the edit landed: `gh <issue|pr> view <n> --json body --jq '.body'` matches the file.

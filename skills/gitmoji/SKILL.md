@@ -1,27 +1,27 @@
 ---
 name: gitmoji
-description: Write a commit message using gitmoji. Use when writing a git commit, suggesting a commit message, or when asked to gitmoji a message.
+description: Gitmoji commit messages. Use when committing or writing a commit message.
 argument-hint: "[staged|chat|all|split]"
 ---
 
 # Gitmoji Commit Messages
 
-Always generate **exactly one** commit message — never a list, never one per file.
+Write one commit message per commit: a single subject line summarizing all its changes together, prefixed with the most SPECIFIC emoji that represents the overall change.
 
-Summarize all changes together in one subject line. Prefix it with the most SPECIFIC emoji that represents the overall change.
-
-Format: `<emoji> <imperative summary>` (≤72 chars). Only write a body if deemed absolutely necessary. Use the emoji character, not the `:code:`.
+Format: `<emoji> <imperative summary>` (≤72 chars). Use the emoji character itself (✨), as listed in the reference. Add a body only when the subject cannot carry a necessary detail.
 
 Emoji definitions: [./references/gitmojis.md](./references/gitmojis.md)
 
-Output the commit message in markdown format inside a code block.
+When the user asked you to commit, run `git commit` with the message. Otherwise, output the message in a fenced code block.
+
+## Scope
+
+When invoked without a shortcommand, cover the staged changes; when nothing is staged, cover the files you changed in this session.
 
 ## Shortcommands
-
-When the skill is invoked with one of the shortcommands below, follow the instructions for that command.
 
 - `/gitmoji`: write a commit message for all staged changes; when nothing is staged, behave as `/gitmoji all`.
 - `/gitmoji staged`: write a commit message for all staged changes.
 - `/gitmoji chat`: write a commit message covering only the files you changed in this session; leave other working-tree changes out.
-- `/gitmoji all`: suggest a commit message for all staged and unstaged changes.
-- `/gitmoji split`: help the user split all the current changes into multiple distinct commits.
+- `/gitmoji all`: write a commit message for all staged and unstaged changes.
+- `/gitmoji split`: help the user split all the current changes into distinct commits, each with its own gitmoji message.
