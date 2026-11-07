@@ -1,0 +1,22 @@
+{
+  "name": "grehnen",
+  "owner": {
+    "name": "Emil Grehn",
+    "url": "https://github.com/grehnen"
+  },
+  "description": "Emil Grehn's agent skills, as an installable Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "grehnen-skills",
+      "source": "./",
+      "description": "Emil Grehn's agent skills: gitmoji commit messages and editing GitHub issue and PR bodies with gh.",
+      "category": "productivity",
+      "keywords": [
+        "skills",
+        "git",
+        "gitmoji",
+        "github"
+      ]
+    }
+  ]
+}

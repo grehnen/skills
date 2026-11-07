@@ -1,0 +1,23 @@
+{
+  "name": "grehnen-skills",
+  "version": "0.1.0",
+  "description": "Emil Grehn's agent skills: gitmoji commit messages and editing GitHub issue and PR bodies with gh.",
+  "author": {
+    "name": "Emil Grehn",
+    "url": "https://github.com/grehnen"
+  },
+  "homepage": "https://github.com/grehnen/skills",
+  "repository": "https://github.com/grehnen/skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "git",
+    "gitmoji",
+    "github",
+    "gh"
+  ],
+  "skills": [
+    "./skills/gitmoji",
+    "./skills/gh-body-editing"
+  ]
+}

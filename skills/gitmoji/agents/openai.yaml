@@ -1,0 +1,3 @@
+interface:
+  display_name: "Gitmoji"
+  short_description: "Write gitmoji commit messages"
