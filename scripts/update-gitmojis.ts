@@ -14,7 +14,7 @@ const OUTPUT_REL = relative(process.cwd(), OUTPUT);
 
 // Custom gitmoji not in upstream, appended after the upstream list.
 const CUSTOM = [
-  { emoji: '🤖', description: 'Add or update agent instructions, skills, prompts or other tooling.' },
+  { emoji: '🤖', description: 'Add or update agent instructions, skills or config.' },
 ];
 
 console.log(`Fetching gitmojis from ${SOURCE_URL}`);
