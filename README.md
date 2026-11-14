@@ -21,6 +21,7 @@ Or as a Claude Code plugin:
 
 - **[gitmoji](./skills/gitmoji/SKILL.md)**: Write a single commit message prefixed with the most specific gitmoji.
 - **[gh-body-editing](./skills/gh-body-editing/SKILL.md)**: Edit a multi-line GitHub issue or PR body through a temp file and `--body-file`.
+- **[orchestrate](./skills/orchestrate/SKILL.md)**: Act as a pure orchestrator that delegates exploration, implementation, and review to subagents.
 
 ## Updating the gitmoji list
 

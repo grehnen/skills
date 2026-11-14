@@ -18,6 +18,7 @@
   ],
   "skills": [
     "./skills/gitmoji",
-    "./skills/gh-body-editing"
+    "./skills/gh-body-editing",
+    "./skills/orchestrate"
   ]
 }
